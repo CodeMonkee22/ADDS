@@ -1,4 +1,4 @@
-#include "referee.h"
+#include "Referee.h"
 #include <string>
 #include <iostream>
 

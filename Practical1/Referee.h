@@ -1,6 +1,6 @@
-#include "player.h"
-#include "computer.h"
-#include "human.h"
+#include "Player.h"
+#include "Computer.h"
+#include "Human.h"
 
 class Referee {
   public:
