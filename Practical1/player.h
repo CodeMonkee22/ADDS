@@ -11,7 +11,8 @@ class Player {
 
   public:
     virtual char makeMove() = 0;
-    string getName();   
+    string getName();  
+    Player(string name); 
 
 };
 

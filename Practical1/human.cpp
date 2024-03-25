@@ -1,12 +1,12 @@
 #include "human.h"
 #include <iostream>
-using namespace std;
 
-Human::Human(string name) : name(name) {}
-
-Human::Human() {
-    this->name = "Human";
+Human::Human(std::string name) : Player(name) {
 }
+
+Human::Human() : Player("Human") {
+}
+
 
 char Human::makeMove() {
     char move;

@@ -5,36 +5,19 @@
 
 int main() {
 
-    Player* player1;
+    Player* player1= new Computer();
 
-    player1 = new Computer();
+    Player* player2 = new Human("Joe");
 
-    string playerName;
-    cout << "Enter player name: " << endl;
-    cin >> playerName;
-
-    Player* player2;
-
-    player2 = new Human(playerName);
-
-    Referee* referee;
-    
-    referee = new Referee();
+    Referee* referee = new Referee();
 
     Player* player_result =  referee->refGame(player1, player2); 
 
     if(player_result == nullptr) {
-
-    }
-    
-    else if (player_result->getName() == "Computer") {
-        cout << "Computer wins!!" << endl;
+        cout << "tie" << endl;
     }
     else {
         cout << player_result->getName() << " wins!!" << endl;
     }
-
-    cout << player_result->getName() << endl;
-
     return 0;
 }

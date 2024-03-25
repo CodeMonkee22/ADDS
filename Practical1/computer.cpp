@@ -1,7 +1,6 @@
 #include "computer.h"
 
-Computer::Computer() {
-    this->name = "Computer";
+Computer::Computer() : Player("Computer") {
 }
 
 char Computer::makeMove() {

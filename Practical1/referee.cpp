@@ -6,16 +6,29 @@ Referee::Referee() {}
 
 Player* Referee::refGame(Player* player1, Player* player2) {
 
-    player1->makeMove();
-    char playerMove = player2->makeMove();
+    char player1Move = player1->makeMove();
+    char player2Move = player2->makeMove();
 
-    cout << player2->getName() << endl; 
 
-    if (playerMove == 'p') {
-        return player2;
-    }
-    else if (playerMove == 's') {
+    if (player1Move == 'p' && player2Move == 'r') {
         return player1;
     }
+    else if (player1Move == 'p' && player2Move == 's') {
+        return player2;
+    }
+    else if (player1Move == 's' && player2Move == 'p') {
+        return player1;
+    }
+    else if (player1Move == 's' && player2Move == 'r') {
+        return player2;
+    }
+    else if (player1Move == 'r' && player2Move == 's') {
+        return player1;
+    }
+    else if (player1Move == 'r' && player2Move == 'p') {
+        return player2;
+    }
+
+
     return nullptr;
 }

@@ -5,11 +5,9 @@
 
 
 class Human : public Player{
-    private:
-    string name;
     public:
     Human();
-    Human(string name);
+    Human(std::string name);
     char makeMove();
 
 };
