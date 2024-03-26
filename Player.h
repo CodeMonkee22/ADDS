@@ -13,6 +13,7 @@ class Player {
     virtual char makeMove() = 0;
     string getName();  
     Player(string name); 
+    virtual ~Player();
 
 };
 

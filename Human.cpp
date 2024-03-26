@@ -10,20 +10,20 @@ Human::Human() : Player("Human") {
 
 char Human::makeMove() {
     char move;
-          cout << "Enter move: " << endl;
+          cout << "Enter move: ";
           cin >> move;
           switch(move) {
-            case 'r':
-              return 'r';
+            case 'R':
+              return move;
               break;
-            case 'p':
-              return 'p';
+            case 'P':
+              return move;
               break;
-            case 's':
-              return 's';
+            case 'S':
+              return move;
               break;
             default:
-              return 'r';
+              return 'R';
               break;
           } 
 }
