@@ -9,8 +9,9 @@ Human::Human(std::string name) : Player(name) {}
 Move* Human::makeMove() {
 
     std::string player;
-    std::cout << "Enter Move: " << std::endl;
+    std::cout << "Enter Move: ";
     std::cin >> player;
+    std::cout <<""<<std::endl; 
 
     if (player == "Monkey" || player == "monkey") {
         Move* monkey = new Monkey("Monkey");
