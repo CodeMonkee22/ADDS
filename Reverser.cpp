@@ -1,19 +1,19 @@
 #include "Reverser.h"
+#include <cmath>
+#include <iostream>
 
-int Reverser::reverseDigit(int value, int reversedNum) {
+int Reverser::reverseDigit(int value) {
 
     if(value < 0) {
         return -1;
     }
     
     if (value == 0) {
-            return reversedNum;
+            return value;
     }
-    
-    int lastDigit = value % 10;
-    reversedNum = (reversedNum * 10) + lastDigit;
 
-    return reverseDigit(value/10, reversedNum);
+
+    return ((value%10) * pow(10, (int)log10(value)) + reverseDigit(value/10));
 
 }
 
