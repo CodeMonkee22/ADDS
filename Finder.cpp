@@ -27,10 +27,10 @@ std::vector<int> Finder::findSubstrings(std::string s1, std::string s2) {
 
     result = concatenateVectors(result, findSubstrings(s1, s2.substr(0, s2.size() - 1)));
 
-    for(size_t i = 0; i < result.size(); i++) {
-        std::cout << result[i] << ", ";
-    }
-    std::cout << "" << std::endl;
+    // for(size_t i = 0; i < result.size(); i++) {
+    //     std::cout << result[i] << ", ";
+    // }
+    // std::cout << "" << std::endl;
 
     return result;
 }
