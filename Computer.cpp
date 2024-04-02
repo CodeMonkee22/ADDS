@@ -17,19 +17,35 @@ Move* Computer::makeMove() {
 
     std::map<int,std::string> characterMap;
 
-    characterMap[1] = "Monkey";
-    characterMap[2] = "Robot";
-    characterMap[3] = "Pirate";
-    characterMap[4] = "Ninja";
-    characterMap[5] = "Zombie";
-
-    while(true) {    
+    characterMap[1] = "Rock";
+    characterMap[2] = "Paper";
+    characterMap[3] = "Scissors";
+    characterMap[4] = "Monkey";
+    characterMap[5] = "Robot";
+    characterMap[6] = "Pirate";
+    characterMap[7] = "Ninja";
+    characterMap[8] = "Zombie";    
         
-    int randMove = rand() % 5 + 1;
+    int randMove = rand() % 8 + 1;
 
     std::string randCharacter = characterMap[randMove];
 
-    if(characterMap[randMove] == "Monkey") {
+    if(characterMap[randMove] == "Rock") {
+        character = new Rock(characterMap[randMove]);
+        move = character;
+        return character;
+    }
+    else if(characterMap[randMove] == "Paper") {
+        character = new Paper(characterMap[randMove]);
+        move = character;
+        return character;
+    }
+    else if(characterMap[randMove] == "Scissors") {
+        character = new Scissors(characterMap[randMove]);
+        move = character;
+        return character;
+    }
+    else if(characterMap[randMove] == "Monkey") {
         character = new Monkey(characterMap[randMove]);
         move = character;
         return character;
@@ -54,8 +70,7 @@ Move* Computer::makeMove() {
         move = character;
         return character;
     }
-    
-  }
+
     
     return nullptr;
 }

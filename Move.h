@@ -13,6 +13,24 @@ class Move {
 
 };
 
+class Rock : public Move {
+    public:
+    Rock(std::string name);
+    Move* compareGame(Move* computer, Move* human);
+};
+
+class Paper : public Move {
+    public:
+    Paper(std::string name);
+    Move* compareGame(Move* computer, Move* human);
+};
+
+class Scissors : public Move {
+    public:
+    Scissors(std::string name);
+    Move* compareGame(Move* computer, Move* human);
+};
+
 class Monkey : public Move {
     public:
     Monkey(std::string name);

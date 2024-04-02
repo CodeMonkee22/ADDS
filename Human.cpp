@@ -11,7 +11,23 @@ Move* Human::makeMove() {
     std::string player;
     std::cin >> player;
 
-    if (player == "Monkey" || player == "monkey") {
+    if (player == "Rock" || player == "rock") {
+        Move* rock = new Rock("Rock");
+        move = rock;
+        return rock;
+    }
+    else if (player == "Paper" || player == "paper") {
+        Move* paper = new Paper("Paper");
+        move = paper;
+        return paper;
+    }
+    else if (player == "Scissors" || player == "scissors") {
+        Move* scissors = new Scissors("Scissors");
+        move = scissors;
+        return scissors;
+    }
+    
+    else if (player == "Monkey" || player == "monkey") {
         Move* monkey = new Monkey("Monkey");
         move = monkey;
         return monkey;
@@ -32,7 +48,7 @@ Move* Human::makeMove() {
         return ninja;
     }
     else if(player == "Zombie" || player == "zombie") {
-        Move* zombie = new Ninja("Zombie");
+        Move* zombie = new Zombie("Zombie");
         move = zombie;
         return zombie;
     }
