@@ -2,6 +2,7 @@
 #define FINDER_H
 #include <string>
 #include <vector>
+#include <chrono>
 
 
 class Finder {
