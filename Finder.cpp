@@ -9,7 +9,7 @@ std::vector<int> Finder::findSubstrings(std::string s1, std::string s2) {
   for (size_t i = 1; i <= s2.size(); i = index) { 
     size_t found = s1.find(s2.substr(0, index));
 
-    while (found != std::string::npos) {
+    while (found != std::string::npos && index <= s2.size()) {
       result.push_back(found);
       index++;
       found = s1.find(s2.substr(0,index));
