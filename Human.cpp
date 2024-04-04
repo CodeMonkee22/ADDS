@@ -52,9 +52,8 @@ Move* Human::makeMove() {
         move = zombie;
         return zombie;
     }
-    else {
+
         move = nullptr;
         return nullptr;
-    }
 
 }

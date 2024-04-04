@@ -1,5 +1,6 @@
 #include "Player.h"
 #include "Referee.h"
+#include "Human.h"
 
 Referee::Referee() {}
 
@@ -13,7 +14,6 @@ Player* Referee::refGame(Player* computer, Player* human) {
     }
 
     Move* winnerMove = computerMove->compareGame(computerMove, humanMove);
-
 
     if(winnerMove != nullptr) {
       if (winnerMove->getName() == computerMove->getName()) {
