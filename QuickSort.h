@@ -3,11 +3,13 @@
 #include <vector>
 #include "Sort.h"
 
-class Quicksort : public Sort {
+class QuickSort : public Sort {
 
 public:
-     std::vector<int> sort(std::vector<int> list);
+     private:
      std::vector<int> quickSort(std::vector<int> list, int start, int end);
+     public:
+     std::vector<int> sort(std::vector<int> list);
 };
 
 
