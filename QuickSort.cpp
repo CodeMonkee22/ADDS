@@ -15,21 +15,22 @@ std::vector<int> QuickSort::quickSort(std::vector<int> list, int start, int end)
     int pivot_value = list.at(pivot);
     int pivot_index = start;
 
-
-    for (int i = start; i <= pivot; i++) {
+    for (int i = start; i <= end; i++) {
         if (list.at(i) < pivot_value) {
            std::swap(list[i], list[pivot_index]);
-            pivot_index++;
+           pivot_index++;
         }
     }
 
-    std::swap(list[pivot_index], list[end]);
+    std::swap(list[pivot_index], list[pivot]);
 
     list = quickSort(list, start, pivot_index - 1);
     list = quickSort(list, pivot_index + 1, end);
 
     return list;
 }
+
+
 
 std::vector<int> QuickSort::sort(std::vector<int> list) {
     if (list.empty()) {
