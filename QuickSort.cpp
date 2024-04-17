@@ -1,3 +1,4 @@
+
 #include "QuickSort.h"
 
 std::vector<int> QuickSort::quickSort(std::vector<int> list, int start, int end) {
@@ -22,7 +23,10 @@ std::vector<int> QuickSort::quickSort(std::vector<int> list, int start, int end)
         }
     }
 
-    std::swap(list[pivot_index], list[pivot]);
+    if(pivot_index < pivot) {
+        std::swap(list[pivot_index], list[pivot]);
+    }
+    
 
     list = quickSort(list, start, pivot_index - 1);
     list = quickSort(list, pivot_index + 1, end);
@@ -42,4 +46,3 @@ std::vector<int> QuickSort::sort(std::vector<int> list) {
 
     return quickSort(list, start, end);
 }
-

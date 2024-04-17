@@ -5,19 +5,23 @@ bool RecursiveBinarySearch::search(std::vector<int> list, int value) {
         return false;
     }
 
-    int midpoint = list.size()/2;
+    int midpoint = list.size() / 2;
 
-    if(list.at(midpoint) == value) {
+    if(list[midpoint] == value) {
         return true;
     }
 
-    if(list.at(midpoint) > value) {
-        std::vector<int> firstHalf(list.begin(), list.begin() + midpoint-1);
+    if(list[midpoint] > value) {
+        if (midpoint == 0) 
+            return false;
+        std::vector<int> firstHalf(list.begin(), list.begin() + midpoint);
         return search(firstHalf, value);
     }
 
-    if(list.at(midpoint) < value) {
-        std::vector<int> secondHalf(list.begin() + midpoint+1, list.end());
+    if(list[midpoint] < value) {
+        if (midpoint == list.size() - 1)
+            return false;
+        std::vector<int> secondHalf(list.begin() + midpoint, list.end());
         return search(secondHalf, value);
     }
 

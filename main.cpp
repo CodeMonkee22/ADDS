@@ -7,27 +7,26 @@
 
 int main() {
 
-    std::vector<int> list = {1, 3, 5, 4, -5, 100, 7777, 2014};
+    // std::vector<int> list = {-5, -8, -4, -2, -1};
 
-    QuickSort quickSort;
+    // QuickSort quickSort;
 
-    std::vector<int> sortedList = quickSort.sort(list);
+    // std::vector<int> sortedList = quickSort.sort(list);
 
-    RecursiveBinarySearch binarySearch;
+    // RecursiveBinarySearch binarySearch;
 
-    if(binarySearch.search(sortedList,100) == true) {
-        std::cout << "true ";
-    } 
-    else {
-        std::cout << "false ";
-    }
+    // if(binarySearch.search(sortedList, 0) == true) {
+    //     std::cout << "true ";
+    // } 
+    // else {
+    //     std::cout << "false ";
+    // }
 
-    for(int i = 0; i < sortedList.size(); i++) {
-        std::cout << sortedList.at(i) << " ";
-    }
+    // for(int i = 0; i < sortedList.size(); i++) {
+    //     std::cout << sortedList.at(i) << " ";
+    // }
 
-    std::cout << std::endl;
-
+    // std::cout << std::endl;
 
     return 0;
 }
