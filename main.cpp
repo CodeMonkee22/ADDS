@@ -7,7 +7,7 @@
 
 int main() {
 
-    std::vector<int> list = {1, 3, 5, 4, -5, 100, 7777, 2014};
+    std::vector<int> list = {1, 3, 5, 4, -5, 100, 7777, 2014, 0};
 
     QuickSort quickSort;
 
