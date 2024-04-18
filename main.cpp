@@ -3,11 +3,22 @@
 #include "RecursiveBinarySearch.h"
 #include <iostream>
 #include <vector>
+#include <sstream>
 
 
 int main() {
+     
+    std::string input;
+    std::getline(std::cin, input);
 
-    std::vector<int> list = {1, 3, 5, 4, -5, 100, 7777, 2014, 0};
+    std::vector<int> list;
+    std::stringstream  ss(input);
+
+    int num;
+
+    while (ss >> num) {
+        list.push_back(num);
+    } 
 
     QuickSort quickSort;
 
