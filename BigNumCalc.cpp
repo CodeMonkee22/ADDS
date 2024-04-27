@@ -1,6 +1,6 @@
 #include "BigNumCalc.h"
 
-std::list<int> bigNumCalc::buildBigNum(std::string numString) {
+std::list<int> BigNumCalc::buildBigNum(std::string numString) {
     std::list<int> result;
     for (char digitChar : numString) {
         int digit = digitChar - '0';
@@ -9,7 +9,7 @@ std::list<int> bigNumCalc::buildBigNum(std::string numString) {
     return result;
 }
 
-std::list<int> bigNumCalc::add(std::list<int> num1, std::list<int> num2) {
+std::list<int> BigNumCalc::add(std::list<int> num1, std::list<int> num2) {
     std::list<int> result;
     int carry = 0;
     auto it1 = num1.rbegin();
@@ -30,7 +30,7 @@ std::list<int> bigNumCalc::add(std::list<int> num1, std::list<int> num2) {
     return result;
 }
 
-std::list<int> bigNumCalc::sub(std::list<int> num1, std::list<int> num2) {
+std::list<int> BigNumCalc::sub(std::list<int> num1, std::list<int> num2) {
     std::list<int> result;
     int borrow = 0;
     auto it1 = num1.rbegin();
@@ -50,14 +50,13 @@ std::list<int> bigNumCalc::sub(std::list<int> num1, std::list<int> num2) {
         result.push_front(diff);
         ++it1;
     }
-    // Remove leading zeros
     while (!result.empty() && result.front() == 0) {
         result.pop_front();
     }
     return result;
 }
 
-std::list<int> bigNumCalc::mul(std::list<int> num1, std::list<int> num2) {
+std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2) {
     std::list<int> result(num1.size() + num2.size(), 0);
     auto it1 = num1.rbegin();
     int shift = 0;
@@ -78,7 +77,6 @@ std::list<int> bigNumCalc::mul(std::list<int> num1, std::list<int> num2) {
         ++it1;
         ++shift;
     }
-    // Remove leading zeros
     while (!result.empty() && result.front() == 0) {
         result.pop_front();
     }
