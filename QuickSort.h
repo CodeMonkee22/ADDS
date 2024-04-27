@@ -1,17 +1,14 @@
-#ifndef __QUICKSORT_H__
-#define __QUICKSORT_H__
+#ifndef QUICKSORT_H
+#define QUICKSORT_H
 #include <vector>
 #include "Sort.h"
 
 class QuickSort : public Sort {
-
-public:
-     private:
-     std::vector<int> quickSort(std::vector<int> list, int start, int end);
-     public:
-     std::vector<int> sort(std::vector<int> list);
+    public:
+        std::vector<int> sort(std::vector<int> list) override;
+    private:
+        void quickSort(std::vector<int>& list, int low, int high);
+        int partition(std::vector<int>& list, int low, int high);
 };
-
-
 
 #endif

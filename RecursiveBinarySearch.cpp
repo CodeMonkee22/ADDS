@@ -5,7 +5,7 @@ bool RecursiveBinarySearch::search(std::vector<int> list, int value) {
         return false;
     }
 
-    int midpoint = list.size() / 2;
+    long unsigned int midpoint = list.size() / 2;
 
     if(list[midpoint] == value) {
         return true;

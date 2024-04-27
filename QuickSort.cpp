@@ -1,48 +1,27 @@
-
 #include "QuickSort.h"
 
-std::vector<int> QuickSort::quickSort(std::vector<int> list, int start, int end) {
-    if (start >= end) {
-        return list;
-    }
-
-    int pivot;
-    if (end - start >= 2) {
-        pivot = start + 2; 
-    } else {
-        pivot = end;
-    }
-
-    int pivot_value = list.at(pivot);
-    int pivot_index = start;
-
-    for (int i = start; i <= end; i++) {
-        if (list.at(i) < pivot_value) {
-           std::swap(list[i], list[pivot_index]);
-           pivot_index++;
-        }
-    }
-
-    if(pivot_index < pivot) {
-        std::swap(list[pivot_index], list[pivot]);
-    }
-    
-
-    list = quickSort(list, start, pivot_index - 1);
-    list = quickSort(list, pivot_index + 1, end);
-
+std::vector<int> QuickSort::sort(std::vector<int> list) {
+    quickSort(list, 0, list.size() - 1);
     return list;
 }
 
-
-
-std::vector<int> QuickSort::sort(std::vector<int> list) {
-    if (list.empty()) {
-        return list;
+void QuickSort::quickSort(std::vector<int>& list, int low, int high){
+    if (low < high){
+        int pivot = partition(list, low, high);
+        quickSort(list, low, pivot - 1);
+        quickSort(list, pivot + 1, high);
     }
+}
 
-    int start = 0;
-    int end = list.size() - 1;
-
-    return quickSort(list, start, end);
+int QuickSort::partition(std::vector<int>& list, int low, int high) {
+    int pivot = list[high];
+    int i = low - 1;
+    for(int j = low; j < high; j++){
+        if (list[j] < pivot){
+            ++i;
+            std::swap(list[i], list[j]);
+        }
+    }
+    std::swap(list[i+1], list[high]);
+    return i + 1;
 }

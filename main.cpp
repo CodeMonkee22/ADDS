@@ -33,7 +33,7 @@ int main() {
          std::cout << "false ";
      }
 
-    for(int i = 0; i < sortedList.size(); i++) {
+    for(long unsigned int i = 0; i < sortedList.size(); i++) {
         std::cout << sortedList.at(i) << " ";
     }
 
