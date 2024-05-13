@@ -18,16 +18,3 @@ int kth_largest(std::vector<int> values, int k) {
     
     return queue.top();
 }
-
-
-int main() {
-
-    std::vector<int> values = {3, 6, 2, 4, 8, 1, 9, 7, 5, 10};
-
-    int nLargest = kth_largest(values, 4);
-
-    std::cout << nLargest << std::endl;
-
-
-    return 0;
-}
